@@ -4,12 +4,12 @@
 
 ```bash
 $ git clone https://github.com/Eaarjun/omweather.git
+
+```
+## Locate to Backend and Initialize Backend Server
+```bash
 $ cd backend
 $ npm install
-```
-## Start Backend Server
-```bash
-
 $ npm start
 ```
 
