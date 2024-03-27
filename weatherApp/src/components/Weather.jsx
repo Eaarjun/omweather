@@ -11,7 +11,7 @@ const Weather = ({ data, setData, searchCountry }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/weather?country=${searchCountry}`);
+        const response = await axios.get(`https://omweather.onrender.com/weather?country=${searchCountry}`);
        // setData(response.data);
         setData(response.data);
         setLoading(false);
