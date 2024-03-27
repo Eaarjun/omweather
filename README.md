@@ -3,7 +3,16 @@
 ## Installation
 
 ```bash
-$ git clone https://github.com/yourusername/yourproject.git
-$ cd yourproject
+$ git clone https://github.com/Eaarjun/omweather.git
+$ cd backend
 $ npm install
-# Additional setup steps...
+
+```bash
+Start Backend Server
+$ npm start
+
+```bash 
+Locate to frontend folder
+$ cd weatherApp
+$ npm i
+$ npm run dev
