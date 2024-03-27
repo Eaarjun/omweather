@@ -17,7 +17,7 @@ const Navbar = ({searchCountry, setSearchCountry,setData}) => {
       console.log('Search Country:', searchCountry);
       
       try {
-          const response = await fetch('http://localhost:3000/weather', {
+          const response = await fetch('https://omweather.onrender.com/weather', {
               method: 'POST',
               headers: {
                 "Content-Type": "application/json",
