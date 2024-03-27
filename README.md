@@ -5,14 +5,17 @@
 ```bash
 $ git clone https://github.com/Eaarjun/omweather.git
 $ cd backend
-$ npm install```
-
+$ npm install
+```
+## Start Backend Server
 ```bash
 Start Backend Server
 $ npm start
+```
 
-```bash 
-Locate to frontend folder
+# Go TO Frontend Folder
+```bash
 $ cd weatherApp
 $ npm i
 $ npm run dev
+```
