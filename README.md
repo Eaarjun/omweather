@@ -5,7 +5,7 @@
 ```bash
 $ git clone https://github.com/Eaarjun/omweather.git
 $ cd backend
-$ npm install
+$ npm install```
 
 ```bash
 Start Backend Server
