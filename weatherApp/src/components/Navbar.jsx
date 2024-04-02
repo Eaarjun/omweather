@@ -4,11 +4,14 @@ import logo from '../assets/logo.png'
 import PropTypes from 'prop-types'
 
 
-const Navbar = ({searchCountry, setSearchCountry,setData}) => {
+const Navbar = ({searchCountry, setSearchCountry}) => {
  // const [searchCountry, setSearchCountry] = useState('')
    
   const handleChange = (event) => {
     setSearchCountry(event.target.value);
+    if(event.target.value === Object) {
+      setSearchCountry('')
+    }
     
   };
 
@@ -17,7 +20,7 @@ const Navbar = ({searchCountry, setSearchCountry,setData}) => {
       console.log('Search Country:', searchCountry);
       
       try {
-          const response = await fetch('https://omweather.onrender.com/weather', {
+          const response = await fetch('http://localhost:3000/weather', {
               method: 'POST',
               headers: {
                 "Content-Type": "application/json",
@@ -28,7 +31,7 @@ const Navbar = ({searchCountry, setSearchCountry,setData}) => {
           const data = await response.json();
           
           console.log("Sucess",data);
-          setData(data);
+          setSearchCountry(data);
           console.log(data);
           // setSearchCountry(data);
       } catch (error) {
@@ -57,7 +60,6 @@ const Navbar = ({searchCountry, setSearchCountry,setData}) => {
 Navbar.propTypes = {
   searchCountry: PropTypes.string.isRequired,
   setSearchCountry: PropTypes.func.isRequired,
-  setData: PropTypes.func.isRequired
 };
 export default Navbar
 
