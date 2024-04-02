@@ -10,15 +10,9 @@ const Weather = ({ data, setData, searchCountry }) => {
   console.log(data);
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await axios.get(`https://omweather.onrender.com/weather?country=${searchCountry}`);
-       // setData(response.data);
-        setData(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
+      setLoading(true);
+      console.log(searchCountry);
+      setLoading(false);
     };
     fetchData();
   }, [searchCountry, setData]);
@@ -31,17 +25,17 @@ return (
     ) : (
       <div>
           <Container>
-              <Heading>Weather Details for {data.city}</Heading>
+              <Heading>Weather Details for {searchCountry.city}</Heading>
               <WeatherContainer>
-                  <p>Temperature : {data.temperature}°C</p>
-                  <p>Feels like : {data.feelsLike}°C</p>
-                  <p>Max Temperature : {data.maxTemp}°C</p>
-                  <p>Minimum Temperature : {data.minTemp}°C</p>
-                  <p>Description : {data.description}</p>
-                  <p>Humidity : {data.humidity}</p>
-                  <p>Wind : {data.windSpeed}</p>
-                  <p>Country Code : {data.country}</p>
-                  <p>City : {data.city}</p>
+                  <p>Temperature : {searchCountry.temperature}°C</p>
+                  <p>Feels like : {searchCountry.feelsLike}°C</p>
+                  <p>Max Temperature : {searchCountry.maxTemp}°C</p>
+                  <p>Minimum Temperature : {searchCountry.minTemp}°C</p>
+                  <p>Description : {searchCountry.description}</p>
+                  <p>Humidity : {searchCountry.humidity}</p>
+                  <p>Wind : {searchCountry.windSpeed}</p>
+                  <p>Country Code : {searchCountry.country}</p>
+                  <p>City : {searchCountry.city}</p>
                   
               </WeatherContainer>
           </Container>
