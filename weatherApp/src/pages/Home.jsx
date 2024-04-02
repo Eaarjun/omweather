@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <>
         {/* Displaying Navbar component */}
-        <Navbar   searchCountry={searchCountry} setData={setData} setSearchCountry={setSearchCountry}/>
+        <Navbar   searchCountry={searchCountry} setSearchCountry={setSearchCountry} setData={setData} />
 
-        <Weather  data={data}  searchCountry={searchCountry}  />
+        <Weather  data={data}  searchCountry={searchCountry}  setSearchCountry={setSearchCountry}/>
     </>
   )
 }
